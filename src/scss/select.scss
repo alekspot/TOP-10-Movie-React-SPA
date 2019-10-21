@@ -1,0 +1,13 @@
+.select {
+
+    &__select {
+      max-width: 130px;
+    }
+  
+    @media (max-width: 767px){
+      &__title {
+        font-size: 28px;
+      }
+    }
+  
+  }

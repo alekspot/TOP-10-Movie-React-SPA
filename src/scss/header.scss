@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    align-items: center;
+    
+    &__logo {
+      max-width: 125px;
+    }
+  
+    @media screen and (max-width:400px){
+      &__title {
+        font-size: 8.3vw;
+      }
+    }
+  }
