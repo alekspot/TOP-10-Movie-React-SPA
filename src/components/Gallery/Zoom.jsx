@@ -13,8 +13,8 @@ const Zoom = (props) => {
                 classNames="alert" 
                 unmountOnExit 
             >
-                <div className="row zoom__block col-12 position-fixed justify-content-center"> 
-                    <img className="zoom__img col-2 " src={img} alt=""/> 
+                <div className="row zoom__block position-fixed"> 
+                    <img className="zoom__img " src={img} alt=""/> 
                 </div>
             </CSSTransition>  
         </>
