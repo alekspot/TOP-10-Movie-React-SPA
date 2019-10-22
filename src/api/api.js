@@ -5,12 +5,6 @@ const instance = axios.create({
     baseURL: `https://api.themoviedb.org/3`
 });
 
-const instance2 = axios.create({
-    baseURL: `https://api.themoviedb.org/3/`,
-});
-
-
-
 export const API = {
     async getContent(year, type) {
         

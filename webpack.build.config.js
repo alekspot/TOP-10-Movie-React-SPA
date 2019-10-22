@@ -27,5 +27,4 @@ module.exports = merge.smart(baseWebpackConfig, {
             filename: 'style.css'
         })
     ],
-    //devtool: 'inline-source-map'
 });
