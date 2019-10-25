@@ -3,10 +3,13 @@ import {withRouter} from "react-router-dom";
 import {connect} from "react-redux";
 import {compose} from "redux";
 import MoreInfo from './MoreInfo';
-import {getImages} from '../../redux/default-reducers';
+import {getImages, getContent} from '../../redux/default-reducers';
 
 const MoreInfoContainer = props => {
     const {content, images, getImages} = props;
+    if(content.length === 0){
+        return <h1>Контент не загружен, вернитесь на главную страницу)</h1>
+    }
     const contentId = props.match.params.contentId;
 
     const currentContent = content.find(item => item.id === parseInt(contentId));

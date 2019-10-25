@@ -22,7 +22,7 @@ export const API = {
     },
     async getImages (id, type) {
         const images = await instance.get(`${type}/${id}/images?api_key=4a1a49b2bd67384870a57039fbe6ff33`);
-        console.log(images.data.posters);
+        
         return images.data.posters.map(item => (`https://image.tmdb.org/t/p/original${item.file_path}`)); 
     }
 }

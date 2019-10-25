@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component,  } from "react";
 import { hot } from "react-hot-loader";
 
 import './App.scss'
@@ -9,11 +9,14 @@ import MoreInfo from "./components/MoreInfo/MoreInfoContainer";
 import {Route, withRouter, Switch} from "react-router-dom";
 
 class App extends Component {
-  
+  componentDidMount(){
+    console.log(5);
+  }
   render() {
     return (
-        <div>
+        <>
           <Header/>
+          <Switch>
               <Route exact path='/'>
                 <SearchContainer/>
                 <ContentContainer/>
@@ -24,7 +27,11 @@ class App extends Component {
               <Route path='/tv/:contentId?'>
                 <MoreInfo/>
               </Route>
-        </div>
+              <Route path='/ab'>
+                <Header/>
+              </Route>
+           </Switch>
+        </>
     );
   }
 }

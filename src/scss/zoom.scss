@@ -5,23 +5,38 @@
       justify-content: center;
       width: 100%;
       background: rgba(0, 0, 0, 0.897);
-      top:0;
+      top: 0;
       bottom: 0;
       left: 15px;
-      right: 0;
+      
       z-index: 1000;
     }
   
     &__img {
+      position: absolute;
       padding: 0;
       cursor: zoom-out;
     }
   
-    @media screen and (max-width: 420px){
+    
+    @media screen and (orientation: portrait) and (max-width: 1024px){
+      
       &__img {
-       max-width: 100%;
+       top: 54%;
+       margin-top: -65%;
+       max-width: 80%;
       }
     }
+
+    @media screen and (max-width: 420px){    
+
+      &__img {
+       top: 48%;
+       margin-top: -65%;
+       max-width: 90%;
+      }
+    }
+
     @media (orientation: landscape) {
      
       &__img {
